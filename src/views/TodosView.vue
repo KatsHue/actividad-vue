@@ -1,7 +1,9 @@
 <script setup>
 import { ref } from "vue";
 import { uid } from "uid";
+import { Icon } from "@iconify/vue";
 import TodoCreator from "@/components/TodoCreator.vue";
+import TodoItem from "@/components/TodoItem.vue";
 
 const todoList = ref([]);
 const createTodo = (todo) => {
@@ -18,6 +20,13 @@ const createTodo = (todo) => {
   <main>
     <h1>Crea una tarea</h1>
     <TodoCreator @create-todo="createTodo" />
+    <ul class="todo-list" v-if="todoList.length > 0">
+      <TodoItem v-for="(todo, index) in todoList" :todo="todo" :index="index" />
+    </ul>
+    <p class="todos-msg" v-else>
+      <Icon icon="noto-v1:sad-but-relieved-face" width="30" />
+      <span>No tienes tareas por completar ¡Agrega una!</span>
+    </p>
   </main>
 </template>
 
@@ -34,6 +43,27 @@ main {
     margin-bottom: 16px;
     text-align: center;
     font-family: "Marcellus", sans-serif;
+  }
+
+  .todo-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 24px;
+    gap: 20px;
+  }
+
+  .todos-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  span {
+    font-family: "Marcellus", sans-serif;
+    font-weight: bold;
   }
 }
 </style>
