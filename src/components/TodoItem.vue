@@ -10,7 +10,7 @@ const props = defineProps({
     required: true,
   },
 });
-defineEmits(["toggle-complete", "edit-todo", "update-todo"]);
+defineEmits(["toggle-complete", "edit-todo", "update-todo", "delete-todo"]);
 </script>
 
 <template>
@@ -56,6 +56,7 @@ defineEmits(["toggle-complete", "edit-todo", "update-todo"]);
         width="22"
         height="22"
         style="color: rgb(163, 32, 32)"
+        @click="$emit('delete-todo', todo.id)"
       />
     </div>
   </li>
