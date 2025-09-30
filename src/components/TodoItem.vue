@@ -10,6 +10,7 @@ const props = defineProps({
     required: true,
   },
 });
+defineEmits(["toggle-complete"]);
 </script>
 
 <template>
@@ -21,7 +22,7 @@ const props = defineProps({
     />
     <div class="todo">
       <input v-if="todo.isEditing" type="text" :value="todo.todo" />
-      <span v-else>
+      <span v-else :class="{ 'completed-todo': todo.isCompleted }">
         {{ todo.todo }}
       </span>
     </div>
@@ -84,6 +85,10 @@ li {
 
   .todo {
     flex: 1;
+
+    .completed-todo {
+      text-decoration: line-through;
+    }
 
     input[type="text"] {
       width: 100%;
