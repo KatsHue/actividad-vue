@@ -7,7 +7,7 @@ import { RouterLink } from "vue-router";
     <nav class="container">
       <div class="branding">
         <img src="../assets/logo-planit.png" alt="Logo de Planit" />
-        <h1>Planit Todos</h1>
+        <h1>Planit</h1>
       </div>
       <ul class="nav-routes">
         <RouterLink to="/">Inicio</RouterLink>
@@ -34,8 +34,10 @@ header {
       }
 
       h1 {
-        font-size: 23px;
+        font-size: 28px;
         color: #315e28;
+        font-family: "Marcellus", sans-serif;
+        font-weight: bold;
       }
     }
 
@@ -50,6 +52,7 @@ header {
         text-decoration: none;
         color: #294e21;
         font-weight: bold;
+        font-family: "Marcellus", sans-serif;
       }
     }
   }

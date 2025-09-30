@@ -33,6 +33,7 @@ main {
   h1 {
     margin-bottom: 16px;
     text-align: center;
+    font-family: "Marcellus", sans-serif;
   }
 }
 </style>

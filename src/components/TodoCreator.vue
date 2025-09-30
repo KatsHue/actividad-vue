@@ -22,11 +22,10 @@ const createTodo = () => {
 </script>
 
 <template>
-  <div class="input-wrap">
+  <div class="input-wrap" :class="{ 'input-err': todoState.invalid }">
     <input type="text" v-model="todoState.todo" />
     <button @click="createTodo()">Crear</button>
   </div>
-  <p v-if="todoState.invalid" class="err-msg">{{ todoState.errMsg }}</p>
   <p v-show="todoState.invalid" class="err-msg">{{ todoState.errMsg }}</p>
 </template>
 
@@ -37,6 +36,10 @@ const createTodo = () => {
   border: 3px solid #41b080;
   border-radius: 15px;
   margin-bottom: 10px;
+
+  &.input-err {
+    border-color: rgb(163, 32, 32);
+  }
 
   &:focus-within {
     box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1),
@@ -58,21 +61,32 @@ const createTodo = () => {
     margin: 0;
     padding: 8px 16px;
     border: none;
-    border-radius: 15px 15px 3px 3px;
+    border-radius: 10px 10px 10px 10px;
     background-color: #c3ddbc;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: "Marcellus", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
   }
 
   button:hover {
-    background-color: #41b080; /* cambio sutil al pasar el mouse */
+    background-color: #41b080;
+    color: white;
   }
 
   button:active {
-    transform: scale(0.95); /* efecto de "presionado" */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* sombra más suave */
+    transform: scale(0.95);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
+}
+
+.err-msg {
+  margin-top: 6px;
+  font-size: 12px;
+  text-align: center;
+  color: rgb(163, 32, 32);
 }
 </style>

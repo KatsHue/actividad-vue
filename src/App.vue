@@ -10,6 +10,8 @@ import TodoHeader from "./components/TodoHeader.vue";
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap");
 
 * {
   font-family: "Rubik", sans-serif;
