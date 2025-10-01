@@ -1,6 +1,7 @@
 # planit 🌱
 
-This template should help get you started developing with Vue 3 in Vite.
+Planit es una aplicación sencilla de lista de tareas desarrollada con Vue.js.
+Permite agregar, editar, completar y eliminar tareas de manera minimalista.
 
 ## Recommended IDE Setup
 
