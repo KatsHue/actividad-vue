@@ -55,6 +55,20 @@ npm run dev
 <img width="1351" height="639" alt="image" src="https://github.com/user-attachments/assets/e0336489-5b1e-4117-ad87-7cb5a4c1ff83" />
 <img width="1355" height="633" alt="image" src="https://github.com/user-attachments/assets/9dc6d918-f94b-4cad-8def-d54efa0099a1" />
 
+## Mejoras futuras
+
+Aunque la versión actual de Planit funciona completamente en el navegador usando `localStorage` para guardar las tareas, hay varias mejoras que podrían implementarse:
+
+1. **Base de datos en la nube**  
+   - Actualmente las tareas se guardan localmente en el navegador, por lo que no se comparten entre dispositivos ni usuarios.  
+   - Implementar una base de datos permitiría guardar las tareas en la nube y mantener los datos de forma persistente incluso si se borra el cache del navegador.
+
+2. **Sistema de usuarios y login**  
+   - Añadir autenticación permitiría que cada usuario tenga su propia cuenta y acceso seguro a sus tareas.  
+   - Con login, se podrían gestionar tareas personalizadas y privadas.
+
+Estas mejoras transformarían Planit en una aplicación más completa, segura y usable.
+
 
 
 
