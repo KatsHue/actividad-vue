@@ -1,18 +1,15 @@
 <div align="center">
 
-<h2 align="center">planit </h2>
+<h2 align="center">planit 🌱</h2>
 
 Planit es una aplicación sencilla de lista de tareas desarrollada con Vue.js.
 Permite agregar, editar, completar y eliminar tareas de manera minimalista.
-
 <br><br> Clase: <strong>Programación para Internet 2025B<strong>
 
 </div>
 
 
-## Funcionalidades
-
-### ✨ Funcionalidades
+## Funcionalidades ✨
 
 - Agregar nuevas tareas
 - Editar tareas existentes
