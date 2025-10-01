@@ -11,7 +11,7 @@ Permite agregar, editar, completar y eliminar tareas de manera minimalista.
 
 
 ## Funcionalidades
-```markdown
+
 ### ✨ Funcionalidades
 
 - Agregar nuevas tareas
