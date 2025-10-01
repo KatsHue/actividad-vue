@@ -1,11 +1,15 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { uid } from "uid";
 import { Icon } from "@iconify/vue";
 import TodoCreator from "@/components/TodoCreator.vue";
 import TodoItem from "@/components/TodoItem.vue";
 
 const todoList = ref([]);
+
+const todoCompleted = computed(() => {
+  return todoList.value.every((todo) => todo.isCompleted);
+});
 
 const fetchTodoList = () => {
   const savedTodoList = JSON.parse(localStorage.getItem("todoList"));
@@ -24,7 +28,7 @@ const createTodo = (todo) => {
   todoList.value.push({
     id: uid(),
     todo,
-    isCompleted: null,
+    isCompleted: false,
     isEditing: null,
   });
   setTodoListLocalStorage();
@@ -66,9 +70,15 @@ const deleteTodo = (todoId) => {
         @delete-todo="deleteTodo"
       />
     </ul>
-    <p class="todos-msg" v-else>
-      <Icon icon="noto-v1:sad-but-relieved-face" width="30" />
+    <p v-else class="todos-msg">
+      <span><Icon icon="noto-v1:sad-but-relieved-face" width="30" /></span>
       <span>No tienes tareas por completar ¡Agrega una!</span>
+    </p>
+    <p v-if="todosCompleted && todoList.length > 0" class="todos-msg">
+      <span>¡Completaste todas tus tareas! </span>
+      <span>
+        <Icon icon="noto-v1:green-heart" width="20" height="20" />
+      </span>
     </p>
   </main>
 </template>
@@ -105,8 +115,10 @@ main {
   }
 
   span {
+    margin-top: 30px;
     font-family: "Marcellus", sans-serif;
     font-weight: bold;
+    text-align: center;
   }
 }
 </style>
