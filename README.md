@@ -6,7 +6,6 @@ Planit es una aplicación sencilla de lista de tareas desarrollada con Vue.js.
 Permite agregar, editar, completar y eliminar tareas de manera minimalista.
 <br><br> Clase: <strong>Programación para Internet 2025B<strong>
 
-Demo: https://planit-ymcc.onrender.com/
 
 </div>
 
