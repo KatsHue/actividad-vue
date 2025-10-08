@@ -34,7 +34,7 @@ git clone https://github.com/KatsHue/actividad-vue.git
 ### Entra a la carpeta del proyecto
 
 ```sh
-cd planit-app
+cd actividad-vue
 ```
 
 ### Instala dependencias
