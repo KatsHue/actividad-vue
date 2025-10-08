@@ -28,7 +28,7 @@ Permite agregar, editar, completar y eliminar tareas de manera minimalista.
 ### Clona el repositorio
 
 ```sh
-git clone https://github.com/tu-usuario/planit-app.git
+git clone https://github.com/KatsHue/actividad-vue.git
 ```
 
 ### Entra a la carpeta del proyecto
